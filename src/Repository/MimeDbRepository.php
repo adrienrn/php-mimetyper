@@ -2,19 +2,34 @@
 
 namespace MimeTyper\Repository;
 
-use Dflydev\ApacheMimeTypes\JsonRepository;
-
-class MimeDbRepository extends JsonRepository
+/**
+ * Two-ways mapping (type => extensions and extension => types), this class is a
+ * PHP wrapper around the awesome jshttp/mime-db db.json mapping.
+ *
+ * Why jshttp/mime-db? It's the most complete mime type database out there,
+ * compiled from IANA, Apache and custom type from community. It also defines a
+ * nice format for mime type to extension mapping, including source (IANA,
+ * Apache, custom), compressible status, notes, etc.
+ *
+ * @since 0.1.0
+ * @see http://github.com/jshttp/mime-db
+ */
+class MimeDbRepository extends AbstractRepository
 {
+    /**
+     * {@inheritdoc}
+     */
     public function __construct($filename = null)
     {
         if (null === $filename) {
             $filename = dirname(dirname(__DIR__)) . '/node_modules/mime-db/db.json';
         }
-
-        parent::__construct($filename);
+        $this->filename = $filename;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     protected function internalInit()
     {
         // Parse data from mime db.
