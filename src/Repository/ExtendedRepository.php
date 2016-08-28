@@ -8,7 +8,7 @@ namespace MimeTyper\Repository;
  *
  * @since 0.1.0
  */
-class ExtensiveRepository extends CompositeRepository
+class ExtendedRepository extends CompositeRepository
 {
     /**
      * {@inheritdoc}

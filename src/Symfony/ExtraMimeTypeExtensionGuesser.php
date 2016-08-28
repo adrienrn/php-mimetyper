@@ -26,12 +26,12 @@ if (class_exists("Symfony\Component\HttpFoundation\File\MimeType\ExtensionGuesse
  *
  *   use Symfony\Component\HttpFoundation\File\MimeType\ExtensionGuesser;
  *
- *   use MimeTyper\Repository\ExtensiveRepository;
+ *   use MimeTyper\Repository\ExtendedRepository;
  *   use MimeTyper\Symfony\ExtraMimeTypeExtensionGuesser;
  *
  *   $symfonyGuesser = ExtensionGuesser::getInstance();
  *   $extraGuesser = new ExtraMimeTypeExtensionGuesser(
- *     new ExtensiveRepository()
+ *     new ExtendedRepository()
  *   );
  *
  *   $symfonyGuesser->register($extraGuesser);
