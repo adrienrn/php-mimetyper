@@ -25,6 +25,9 @@ class CompositeRepository extends BaseCompositeRepository implements RepositoryI
         return $extensionToType;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function findExtension($type)
     {
         // Get all matching extensions.
@@ -38,6 +41,19 @@ class CompositeRepository extends BaseCompositeRepository implements RepositoryI
         return null;
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function hasExtension($extension)
+    {
+        $extensionToTypes = $this->dumpExtensionToType();
+
+        return (isset($extensionToTypes[$extension]));
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function findTypes($extension)
     {
         $extensionToTypes = $this->dumpExtensionToType();
@@ -47,5 +63,15 @@ class CompositeRepository extends BaseCompositeRepository implements RepositoryI
         }
 
         return array();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function hasType($type)
+    {
+        $typeToExtensions = $this->dumpTypeToExtensions();
+
+        return (isset($typeToExtensions[$type]) && count($typeToExtensions[$type]) > 0);
     }
 }

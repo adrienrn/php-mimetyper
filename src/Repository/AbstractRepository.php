@@ -50,6 +50,16 @@ abstract class AbstractRepository extends BaseAbstractRepository implements Repo
     /**
      * {@inheritdoc}
      */
+    public function hasExtension($extension)
+    {
+        $extensionToTypes = $this->dumpExtensionToType();
+
+        return (isset($extensionToType[$extension]));
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function findTypes($extension)
     {
         $this->init();
@@ -75,5 +85,15 @@ abstract class AbstractRepository extends BaseAbstractRepository implements Repo
         }
 
         return null;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function hasType($type)
+    {
+        $typeToExtensions = $this->dumpTypeToExtensions();
+
+        return (isset($typeToExtensions[$type]) && count($typeToExtensions[$type]) > 0);
     }
 }

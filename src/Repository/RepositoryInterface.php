@@ -18,6 +18,16 @@ interface RepositoryInterface
     public function findExtension($type);
 
     /**
+     * Does extension $extension exists?
+     *
+     * @param  string  $extension
+     *
+     * @return boolean
+     */
+    public function hasExtension($extension);
+
+
+    /**
      * Find all types matching $extension extension.
      *
      * @param  string $extension.
@@ -25,4 +35,13 @@ interface RepositoryInterface
      * @return array.
      */
     public function findTypes($extension);
+
+    /**
+     * Does type $type exists?
+     *
+     * @param  string  $type
+     *
+     * @return boolean
+     */
+    public function hasType($type);
 }
