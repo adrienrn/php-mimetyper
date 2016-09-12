@@ -91,7 +91,7 @@ It all ends up inspecting the file using [finfo](http://php.net/manual/en/functi
 
 - [dflydev/dflydev-apache-mime-types](https://github.com/dflydev/dflydev-apache-mime-types)
 
-  Uses `mimes.type` Apache file, comprehensive api. As stated before, php-mimetyper is heavily inspired by this, extending it to be a bit more complete using an external mapping and a wider interface.
+  Uses `mime.types` Apache file, comprehensive api. As stated before, php-mimetyper is heavily inspired by this, extending it to be a bit more complete using an external mapping and a wider interface.
 
 - [symfony/http-foundation](https://github.com/symfony/http-foundation/tree/master/File/MimeType)
 
@@ -103,11 +103,11 @@ It all ends up inspecting the file using [finfo](http://php.net/manual/en/functi
 
 - [Hoa/Mime](https://github.com/hoaproject/Mime)
 
-  The Hoa package to deal with mime types. Uses `mimes.type` Apache file (local fallback) and relies on static methods.
+  The Hoa package to deal with mime types. Uses `mime.types` Apache file (local fallback) and relies on static methods.
 
 - [karwana/php-mime](https://github.com/karwana/php-mime)
   
-  Uses `mimes.type` Apache file and finfo, requires PHP >=5.4.
+  Uses `mime.types` Apache file and finfo, requires PHP >=5.4.
 
 - [PEAR/MIME_Type](https://github.com/pear/MIME_Type)
 
