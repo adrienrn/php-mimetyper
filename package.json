@@ -1,6 +1,6 @@
 {
   "name": "php-mimetyper",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "PHP mime type and extension mapping library: compatible with Symfony, powered by jshttp/mime-db",
   "main": "index.js",
   "scripts": {
