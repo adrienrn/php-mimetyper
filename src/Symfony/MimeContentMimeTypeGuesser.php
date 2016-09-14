@@ -23,6 +23,7 @@ if (class_exists("Symfony\Component\HttpFoundation\File\MimeType\MimeTypeGuesser
  * mime_content_type.
  *
  * @author Hussard <adrien.ricartnoblet@gmail.com>
+ * @since  0.2.0
  */
 class MimeContentMimeTypeGuesser implements MimeTypeGuesserInterface
 {
