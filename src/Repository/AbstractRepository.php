@@ -77,7 +77,7 @@ abstract class AbstractRepository extends BaseAbstractRepository implements Repo
     public function findType($extension)
     {
         // Get all matching extensions.
-        $types = $this->findTypes($type);
+        $types = $this->findTypes($extension);
 
         if (count($types) > 0) {
             // Return first match.
