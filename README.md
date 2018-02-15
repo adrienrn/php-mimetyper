@@ -5,7 +5,7 @@ PHP mime type and extension mapping library: built with [jshttp/mime-db](http://
 ```php
 use MimeTyper\Repository\MimeDbRepository;
 
-$mimeRepostory = new MimeDbRepository();
+$mimeRepository = new MimeDbRepository();
 
 $mimeRepository->findExtensions("image/jpeg"); // ["jpeg","jpg","jpe"]
 $mimeRepository->findExtension("image/jpeg"); // "jpeg"
