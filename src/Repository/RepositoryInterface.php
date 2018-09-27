@@ -1,6 +1,6 @@
 <?php
 
-namespace Mimetyper\Repository;
+namespace MimeTyper\Repository;
 
 interface RepositoryInterface
 {
